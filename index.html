@@ -43,9 +43,11 @@
     var jsPsych = initJsPsych({
       show_progress_bar: true,
       auto_update_progress_bar: false,
+      /*
       on_finish: function() {
         jsPsych.data.displayData('csv');
       }
+      */
     }); 
 
     /* create timeline */
@@ -314,7 +316,7 @@
       data_string: ()=>jsPsych.data.get().csv()
     };
 
-    //timeline.push(save_data)
+    timeline.push(save_data)
 
     /* start the experiment */
     jsPsych.run(timeline);
