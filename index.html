@@ -42,12 +42,21 @@
     /* initialize jsPsych */
     var jsPsych = initJsPsych({
       show_progress_bar: true,
-      auto_update_progress_bar: false,
-      /*
-      on_finish: function() {
-        jsPsych.data.displayData('csv');
+      auto_update_progress_bar: true,
+      on_finish: function(){
+        fetch("https://pipe.jspsych.org/api/data/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "*/*",
+          },
+          body: JSON.stringify({
+            experimentID: "XPKH5lfYgnu0",
+            filename: `WL_${subject_id}.csv`,
+            data: ()=>jsPsych.data.get().csv(),
+          }),
+        })
       }
-      */
     }); 
 
     /* create timeline */
@@ -68,10 +77,9 @@
       on_finish: function(data) {
         subject_id = data.response["pid"]
         jsPsych.data.addProperties({subject_id: data.response["pid"]})
-        filename = `${subject_id}.csv`;
+        //filename = `${subject_id}.csv`;
 
         console.log(subject_id)
-        console.log(filename)
       }
     }
 
@@ -307,16 +315,6 @@
     ////////////////////////////////////////////////////////////////////////
     ///////////////////// SAVE DATA ////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
-
-    const save_data = {
-      type: jsPsychPipe,
-      action: "save",
-      experiment_id: "XPKH5lfYgnu0",
-      filename: filename,
-      data_string: ()=>jsPsych.data.get().csv()
-    };
-
-    timeline.push(save_data)
 
     /* start the experiment */
     jsPsych.run(timeline);
