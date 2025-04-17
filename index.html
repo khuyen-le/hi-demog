@@ -56,6 +56,18 @@
             data: JSON.stringify(jsPsych.data.get()),
           }),
         })
+        .then(response => {
+          // Check if the request was successful
+          if (response.ok) {
+            // Show the thank you popup
+            alert("Thank you for completing the study!");
+          } else {
+            console.error("Failed to submit data. Please inform the researcher.");
+          }
+        })
+        .catch(error => {
+          console.error("Error submitting data:", error);
+        });
       }
     }); 
 
