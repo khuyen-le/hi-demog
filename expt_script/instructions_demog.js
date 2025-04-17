@@ -9,8 +9,7 @@ first_page_instruction =
         <p>This experiment is being conducted by researchers at UC San Diego Language
         and Development Lab. Before you decide to participate, please read the following information carefully:</p>
         <br>
-        <p>In this study, you will hear a character talks about her toys, and try to figure out which name 
-        goes with which toy.<p>
+        <p>In this study, you will hear a character talk about her friends, and try to find out who her friends are.<p>
         
         This study is part of a larger project that explores children's 
       cognitive development. Therefore, the study will use a simple design 
