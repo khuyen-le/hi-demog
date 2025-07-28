@@ -93,7 +93,6 @@ demog_gender_instr = "What is your gender?"
 demog_gender_opts = ["Female", "Male", "Non-binary", "Decline to answer"]
 demog_ethnic_instr = `What is your racial or ethnic identification? <p style="font-size:small">Please select all that apply.</p>`
 demog_ethnic_opts = ["American Indian or Alaska Native", "Asian", "Black or African American", "Hispanic or Latino", "Middle Eastern or North African", "Native Hawaiian or Pacific Islander", "White", "Other"]
-  
 
 
 demog_objective_ses_instr = `What is the highest degree or level of school you have completed?`
@@ -101,6 +100,7 @@ demog_objective_ses_opts = ['8th grade/junior high or less', 'Some high school',
 
 demog_final_feedback_instr = "Were any parts of this experiment confusing?<p></p>We highly appreciate your feedback!"
 demog_meta_instr = "What strategies did you use to answer the questions in the study?"
+demog_strategy_instru = "In the study, how did you decide who Penny's friend is?"
 
 demog_pid_instr = `Please enter the last 4 digits of your PID. We will use this to verify your responses.<font color="brown">*</font>`
 

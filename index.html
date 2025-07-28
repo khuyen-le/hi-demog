@@ -290,6 +290,21 @@
     }
     */
 
+    var demog_strategy = {
+      type: jsPsychSurveyText,
+      preamble: demog_require_answer,
+      questions: [
+        {
+          prompt: demog_strategy_instr,
+          name: "demog_strategy",
+          rows: 5
+        }
+      ],
+      data: {
+        demog_question: "demog_strategy"
+      }
+    }
+
     var demog_final_feedback = {
       type: jsPsychSurveyText,
       preamble: demog_require_answer,
