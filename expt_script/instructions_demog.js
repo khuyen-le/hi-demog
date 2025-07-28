@@ -100,7 +100,7 @@ demog_objective_ses_opts = ['8th grade/junior high or less', 'Some high school',
 
 demog_final_feedback_instr = "Were any parts of this experiment confusing?<p></p>We highly appreciate your feedback!"
 demog_meta_instr = "What strategies did you use to answer the questions in the study?"
-demog_strategy_instru = "In the study, how did you decide who Penny's friend is?"
+demog_strategy_instr = "In the study, how did you decide who Penny's friend is?"
 
 demog_pid_instr = `Please enter the last 4 digits of your PID. We will use this to verify your responses.<font color="brown">*</font>`
 
