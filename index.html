@@ -83,7 +83,8 @@
         {
           prompt: "Researcher: Enter PID:",
           name: "pid",
-          rows: 1
+          rows: 1, 
+          required: true
         }
       ],
       on_finish: function(data) {
@@ -298,7 +299,7 @@
           prompt: demog_strategy_instr,
           name: "demog_strategy",
           rows: 5, 
-          required: true
+          required: true,
         }
       ],
       data: {
